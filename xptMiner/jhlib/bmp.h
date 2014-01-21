@@ -1,0 +1,24 @@
+
+#ifndef JHLIB_BMP_H
+#define JHLIB_BMP_H
+
+#include"./JHLib.h"
+
+
+typedef struct
+{
+	sint32	sizeX;
+	sint32	sizeY;
+	uint8	bitDepth;
+	void*	data;
+	//uint8	format;
+	//uint32	bytesPerRow;
+}bitmap_t;
+
+bitmap_t *bmp_load(char *path);
+void bmp_free(bitmap_t *bmp);
+
+bool bmp_save(char *path, bitmap_t *bitmap);
+
+#endif
+
