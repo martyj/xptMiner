@@ -1,12 +1,34 @@
+
+#ifndef GLOBAL_H
+#define GLOBAL_H
+
+#if defined (__WIN32__)
+
 #pragma comment(lib,"Ws2_32.lib")
 #include<Winsock2.h>
 #include<ws2tcpip.h>
+
+#endif
+
 #include<stdio.h>
 #include<time.h>
 #include<stdlib.h>
 
-#include"jhlib.h" // slim version of jh library
-
+#include "jhlib/bmp.h"
+#include "jhlib/customBuffer.h"
+#include "jhlib/fastSorter.h"
+#include "jhlib/fastString.h"
+#include "jhlib/fileMgr.h"
+#include "jhlib/fMath.h"
+#include "jhlib/hashTable.h"
+#include "jhlib/JHLib.h"
+#include "jhlib/msgQueue.h"
+#include "jhlib/packetBuffer.h"
+#include "jhlib/sData.h"
+#include "jhlib/simpleHTTP.h"
+#include "jhlib/simpleList.h"
+#include "jhlib/streamWrapper.h"
+#include "jhlib/tgaLib.h"
 
 // connection info for xpt
 typedef struct  
@@ -128,3 +150,6 @@ extern volatile uint32 totalCollisionCount;
 extern volatile uint32 totalShareCount;
 
 extern volatile uint32 monitorCurrentBlockHeight;
+
+#endif
+
