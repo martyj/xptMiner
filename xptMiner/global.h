@@ -8,6 +8,11 @@
 #include<Winsock2.h>
 #include<ws2tcpip.h>
 
+#else
+
+#define Sleep sleep
+#include <pthread.h>
+
 #endif
 
 #include<stdio.h>
