@@ -44,7 +44,12 @@
 #define SHA384_BLOCK_SIZE  SHA512_BLOCK_SIZE
 #define SHA224_BLOCK_SIZE  SHA256_BLOCK_SIZE
 
-#include "jhlib/JHLib.h"
+#ifndef SHA2_TYPES
+#define SHA2_TYPES
+typedef unsigned char uint8;
+typedef unsigned int  uint32;
+typedef unsigned long long uint64;
+#endif
 
 #ifdef __cplusplus
 extern "C" {
